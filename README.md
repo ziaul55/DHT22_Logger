@@ -1,6 +1,6 @@
 # Introduction
 - In this project we have sensed temperature and humidity data using DHT22 and stored the sensed data into InfluxDB and then visualized in Grafana. 
-- We built this project by implementing _CoAP_ prototol with _txThings_ framework using Python 2.
+- We built this project by implementing _CoAP_ protocol with _txThings_ framework using Python 2.
 
 ## Requirements
 
