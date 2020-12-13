@@ -1,0 +1,14 @@
+# base image
+FROM arm32v7/python:2.7-buster
+
+# copy all contents from present working directory
+COPY . /txThings_dht_influxdb_grafana
+
+# set the working directory
+WORKDIR /txThings_dht_influxdb_grafana
+
+# install dependencies mentioned in requirements_client.txt
+RUN pip install -r requirements_client.txt
+
+# start container with "python src/client.py" command
+CMD python src/client.py

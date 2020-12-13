@@ -1,0 +1,44 @@
+# log in with shell
+
+host=192.168.1.128
+port=8086
+username=influxdbuser
+password=influxdbuserpassword
+database=strawberry_factory
+
+influx -host $host -port $port -username $username -password $password -database $database
+
+
+# help 
+help
+HELP
+
+
+# show databases
+show databases;
+SHOW DATABASES;
+
+
+# use strawberry_factory
+use strawberry_factory;
+USE strawberry_factory;
+
+
+# drop strawberry_factory
+drop strawberry_factory;
+DROP strawberry_factory;
+
+
+# show measurement
+show measurements;
+SHOW MEASUREMENTS;
+
+
+# row count
+select count(*) from humidity;
+SELECT COUNT(*) FROM humidity;
+
+
+# exit from influx 
+quit
+

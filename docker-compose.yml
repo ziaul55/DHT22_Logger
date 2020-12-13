@@ -1,0 +1,61 @@
+version: "3"
+
+
+services:
+  grafana:
+    image: grafana/grafana
+    ports:
+      - 3000:3000
+    depends_on:
+      - influxdb
+      #- txthings_server
+      #- txthings_client
+  influxdb:
+    image: influxdb
+    ports:
+      - 8086:8086
+    environment:
+      - INFLUXDB_DB=strawberry_factory
+      - INFLUXDB_USER=influxDBuser
+      - INFLUXDB_USER_PASSWORD=influxDBpass
+      - INFLUXDB_HTTP_AUTH_ENABLED
+  txthings_server:
+    image: txthings_dht_server
+    build:
+      context: ./
+      dockerfile: Dockerfile_server
+    ports:
+      - 5683:5683/udp
+    network_mode: host
+    environment:
+      # DB 
+      - INFLUXDB_DB=strawberry_factory
+      - INFLUXDB_USER=influxDBuser
+      - INFLUXDB_USER_PASSWORD=influxDBpass
+      - INFLUXDB_HOST=192.168.1.125
+      #- INFLUXDB_HOST=influxdb
+      - INFLUXDB_PORT=8086
+    depends_on:
+      - influxdb
+  txthings_client:
+    image: txthings_dht_client
+    build:
+      context: ./
+      dockerfile: Dockerfile_client
+    ports:
+      - 61616:61616/udp
+    network_mode: host
+    environment:
+      # CoAP server
+      - CoAP_HOST=192.168.1.125
+      #- CoAP_HOST=txthings_server
+      - CoAP_PORT=5683
+      # DHT
+      - DHT_MODEL=22
+      - DHT_PIN=23
+      # others
+      - SLEEP=5
+    depends_on:
+      #- influxdb
+      - txthings_server
+    privileged: true
