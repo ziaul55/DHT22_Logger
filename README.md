@@ -37,7 +37,6 @@ docker-compose build
 # 'sudo grafana-server stop'
 docker-compose up
 ```
-
 ## Visualization
 - We built this project with a single Raspberry Pi 3 having IP address _192.168.1.125_. Visualization is done with _Grafana_ which is running on port _3000_. So, complete _URL_ for _Grafana_ will be _192.168.1.125:3000_. 
 - Now browse _192.168.1.125:3000_ URL and provide the username and password as admin admin. Reset password or skip.
