@@ -16,7 +16,7 @@
 - Browser
 
 ## Configuration
-DHT22 sensor read data through the BCM pin 23. Configurations are available at _docker_compose.yml_ and _src/config.py_ files.
+DHT22 sensor read data through the [BCM pin 23](https://pinout.xyz/pinout/pin16_gpio23). Configurations are available at _docker_compose.yml_ and _src/config.py_ files.
 
 ## How to run
 ```
