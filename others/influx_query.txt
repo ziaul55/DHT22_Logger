@@ -2,8 +2,8 @@
 
 host=192.168.1.128
 port=8086
-username=influxdbuser
-password=influxdbuserpassword
+username=influxDBuser
+password=influxDBuserpass
 database=strawberry_factory
 
 influx -host $host -port $port -username $username -password $password -database $database
