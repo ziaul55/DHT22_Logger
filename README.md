@@ -15,6 +15,9 @@
 - Grafana (visualization tool)
 - Browser
 
+## Configuration
+DHT22 sensor read data through the BCM pin 23. Configurations are available at docker_compose.yml and src/config.py files.
+
 ## How to run
 ```
 # clone the project
