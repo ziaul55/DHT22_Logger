@@ -3,7 +3,7 @@ Created on 08-09-2012
 @author: Maciej Wasilak
 
 Updated on 28-11-2020
-@co-author: Johirul Islam; Md. Ziaul Hoque
+@co-authors: Johirul Islam; Md. Ziaul Hoque
 '''
 
 import sys, time
