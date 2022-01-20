@@ -1,5 +1,11 @@
-import datetime
+'''
+Created on 08-09-2012
+@author: Maciej Wasilak
 
+Updated on 28-11-2020
+@co-authors: Johirul Islam; Md. Ziaul Hoque
+'''
+import datetime
 import txthings.coap as coap
 import txthings.resource as resource
 
