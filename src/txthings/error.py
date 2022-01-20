@@ -1,11 +1,12 @@
 """
 Created on 08-09-2012
-
 @author: Maciej Wasilak
+
+Updated on 28-11-2020
+@co-authors: Johirul Islam; Md. Ziaul Hoque
 
 Exception definitions for txThings CoAP library.
 """
-
 
 #import iot.coap
 
