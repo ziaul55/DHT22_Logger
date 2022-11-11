@@ -41,9 +41,9 @@ if __name__ == '__main__':
     model  = models[model]
 
     # readings
-    #temperature = read(sensor, pin)
-    temperature = read(sensor, pin, measure='temperature')
-    humidity    = read(sensor, pin, measure='humidity')
+    #temperature = read(model, pin)
+    temperature = read(model, pin, measure='temperature')
+    humidity    = read(model, pin, measure='humidity')
 
     print('Temperature={:.1f}*C'.format(temperature))
     print('Humidity={:.1f}%'.format(humidity))
